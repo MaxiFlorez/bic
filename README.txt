@@ -1,13 +1,14 @@
-BIC - Sistema de Gestión
+# 📋 **BIC - Sistema de Gestión**
 
 ¡Bienvenido al Sistema de Gestión BIC! Este proyecto está diseñado para la administración de información de detenidos, vehículos y otros módulos.
 
-Tecnologías Utilizadas
-PHP: Lógica del servidor
-MySQL: Base de datos relacional
-HTML/CSS/JavaScript: Interfaz
-Bootstrap 5: Estilos y componentes responsivos
-Estructura del Proyecto
+## 🛠️ **Tecnologías Utilizadas**
+- **PHP**: Lógica del servidor
+- **MySQL**: Base de datos relacional
+- **HTML/CSS/JavaScript**: Interfaz
+- **Bootstrap 5**: Estilos y componentes responsivos
+
+## 🗂️ **Estructura del Proyecto**
 
 bic/
 ├── admin/
@@ -48,18 +49,19 @@ bic/
 ├── login.php
 └── logout.php
 
-Instalación y Configuración
-Requisitos:
 
-XAMPP o similar con PHP y MySQL
-Git
-Clonar el repositorio:
+## ⚙️ **Instalación y Configuración**
 
-bash
-git clone https://github.com/MaxiFlorez/bic.git
+1. **Requisitos:**
+   - Servidor local (XAMPP, WAMP, etc.) con PHP y MySQL
+   - Git
+
+2. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/MaxiFlorez/bic.git
 Coloca la carpeta del proyecto en el directorio htdocs de XAMPP.
 
-Base de datos:
+**Base de datos:**
 
 Importa assets/database/schema.sql en tu servidor MySQL.
 Configura las credenciales en assets/includes/db.php.
@@ -67,7 +69,8 @@ Configuración de archivos:
 
 Verifica que las rutas en los archivos de inclusión sean correctas.
 Asegúrate de que el servidor web tenga permisos para todas las carpetas.
-Uso del Sistema
+
+🛡️ **Uso del Sistema**
 Autenticación:
 
 Inicia sesión en login.php.
@@ -92,8 +95,9 @@ Documentos PDF:
 
 Vehículos: assets/documentos/vehiculos/
 Personas: assets/documentos/personas/
-Contribuciones
+🤝 **Contribuciones**
 ¡Tu ayuda es bienvenida! Haz un fork del repositorio, realiza tus cambios y envía un pull request.
 
-Licencia
+📜 **Licencia**
 Este proyecto es de uso libre. Si lo utilizas, por favor cita la fuente original.
+
