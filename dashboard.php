@@ -1,11 +1,9 @@
 <?php
-include 'includes/auth.php';
+include 'assets/includes/auth.php';
 redirectIfNotLoggedIn();
-include 'includes/header.php';
-include 'includes/db.php';
+include 'assets/includes/header.php';
+include 'assets/includes/db.php';
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -14,7 +12,6 @@ include 'includes/db.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Gestión de Seguridad</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <style>
         body { background-color: #f4f6f9; color: #333; }
         .main-container { padding: 30px; background-color: #fff; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
@@ -51,8 +48,7 @@ include 'includes/db.php';
                         <div class="card-body">
                             <h5 class="card-title text-success">Vehículos</h5>
                             <p class="card-text">Revise los vehículos con órdenes de secuestro o en investigación.</p>
-                            <a href="/bic/modules/vehiculos/listar_autos.php" class="btn btn-success w-100">Ir a Vehículos</a>
-
+                            <a href="modules/vehiculos/listar_vehiculos.php" class="btn btn-success w-100">Ir a Vehículos</a>
                         </div>
                     </div>
                 </div>
@@ -63,7 +59,7 @@ include 'includes/db.php';
                         <div class="card-body">
                             <h5 class="card-title text-danger">Prófugos</h5>
                             <p class="card-text">Consulta el listado de personas prófugas o con pedidos de captura.</p>
-                            <a href="profugos.php" class="btn btn-danger-custom w-100">Ir a Prófugos</a>
+                            <a href="modules/profugos/listar.php" class="btn btn-danger-custom w-100">Ir a Prófugos</a>
                         </div>
                     </div>
                 </div>
@@ -71,7 +67,7 @@ include 'includes/db.php';
         </div>
     </div>
 
-    <?php include 'includes/footer.php'; // Incluye el footer ?>
+    <?php include 'assets/includes/footer.php'; ?>
 
     <!-- Scripts de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

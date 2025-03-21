@@ -1,8 +1,8 @@
 <?php
-include '../../includes/auth.php'; // Retroceder dos niveles para encontrar includes
-redirectIfNotLoggedIn(); // Ahora la función estará definida
-include '../../includes/header.php';
-include '../../includes/db.php';
+include '../../assets/includes/auth.php'; // Ruta corregida para incluir auth.php
+redirectIfNotLoggedIn(); // Asegurar que la función está definida
+include '../../assets/includes/header.php';
+include '../../assets/includes/db.php';
 
 // Obtener los filtros del formulario
 $filtro_nombre = $_GET['filtro_nombre'] ?? '';
@@ -160,11 +160,6 @@ $stmt->execute();
         </div>
     </div>
 
-    <?php include '../../includes/footer.php'; // Incluir el footer
-    // Incluye el footer 
-    //arreglar lo del dni para que me diriga a detalle detenido 
-    ?>
+    <?php include '../../assets/includes/footer.php'; // Incluir el footer ?>
 </body>
 </html>
-
-

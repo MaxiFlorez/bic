@@ -46,7 +46,7 @@ function redirectIfNotAdmin() {
  * Verifica las credenciales y crea la sesión si son correctas.
  */
 function authenticateUser($documento, $clave) {
-    include('includes/db.php'); // Asegúrate de que esta ruta sea correcta
+    include(__DIR__ . '/db.php'); // Ruta correcta para incluir db.php
 
     // Prepara y ejecuta la consulta para verificar las credenciales
     $stmt = $conn->prepare("
@@ -68,4 +68,4 @@ function authenticateUser($documento, $clave) {
     }
     return false; // Credenciales incorrectas
 }
-
+?>

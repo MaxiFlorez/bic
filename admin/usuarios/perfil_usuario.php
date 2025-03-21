@@ -1,9 +1,9 @@
 <?php
 session_start();
-include("../../includes/auth.php"); // Verificar autenticación
-include('../../includes/db.php');
-include("../../includes/header.php");
-// No incluimos logout.php aquí para evitar cerrar sesión automáticamente
+include("../../assets/includes/auth.php"); 
+include("../../assets/includes/db.php");
+include("../../assets/includes/header.php");
+
 
 // Definir variables para evitar errores de undefined
 $mensaje = "";
@@ -133,6 +133,6 @@ if (isset($_POST["actualizar_datos"])) {
             </form>
         </div>
     </div>
-    <?php include '../../includes/footer.php'; // Incluir el footer ?>
-</body>
+    <?php include '../../assets/includes/footer.php'; ?>
+    </body>
 </html>

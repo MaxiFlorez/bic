@@ -1,7 +1,7 @@
 <?php
-include("../../includes/auth.php"); // Verificar autenticación
-redirectIfNotAdmin(); // Solo administradores pueden agregar detenidos
-include("../../includes/db.php"); // Conexión a la base de datos
+include '../../assets/includes/auth.php'; // Ruta corregida para incluir auth.php
+redirectIfNotAdmin(); // Solo administradores pueden acceder a esta página
+include '../../assets/includes/db.php'; // Ruta corregida para incluir db.php
 
 redirectIfNotLoggedIn();
 
@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $conn->prepare("DELETE FROM detenidos WHERE persona_id = ?")->execute([$id]);
             $conn->prepare("DELETE FROM personas WHERE id = ?")->execute([$id]);
 
-            if ($foto && file_exists($foto)) {
-                unlink($foto);
+            if ($foto && file_exists('../../' . $foto)) {
+                unlink('../../' . $foto);
             }
 
             $conn->commit();
@@ -152,7 +152,8 @@ $detenido = $stmt->fetch(PDO::FETCH_ASSOC);
 if (!$detenido) die("Registro no encontrado");
 
 $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-include("../../includes/header.php");
+include("../../assets/includes/header.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -466,6 +467,6 @@ include("../../includes/header.php");
 
     <script src="../../assets/js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<?php include '../../includes/footer.php'; // Incluir el footer ?>
+    <?php include '../../assets/includes/footer.php'; ?>
 </body>
 </html>

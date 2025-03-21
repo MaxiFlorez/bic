@@ -1,8 +1,8 @@
 <?php
-include("../../includes/auth.php");// Incluir el archivo de autenticación para verificar sesión
+include '../../assets/includes/auth.php'; // Ruta corregida para incluir auth.php
 redirectIfNotAdmin(); // Solo administradores pueden agregar detenidos
-include("../../includes/header.php");// Incluir la barra de navegación
-include("../../includes/db.php");// Incluir la conexión a la base de datos
+include '../../assets/includes/header.php'; // Ruta corregida para incluir header.php
+include '../../assets/includes/db.php'; // Ruta corregida para incluir db.php
 
 $error = '';
 $success = '';
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (empty($error)) {
             // Manejo de imágenes
-            $directorio_imagenes = '/bic/assets/imagenes/personas/';  // Ubicación donde se guardarán las fotos
+            $directorio_imagenes = '../../assets/imagenes/personas/';  // Ubicación donde se guardarán las fotos
             if (!is_dir($directorio_imagenes)) {
                 mkdir($directorio_imagenes, 0777, true);
             }
@@ -233,6 +233,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
         </div>
     </div>
-    <?php include '../../includes/footer.php'; // Incluir el footer ?>
+    <?php include '../../assets/includes/footer.php'; // Incluir el footer ?>
 </body>
 </html>
